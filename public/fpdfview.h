@@ -131,7 +131,7 @@ typedef const FS_RECTF* FS_LPCRECTF;
 #define DLLEXPORT __declspec(dllexport)
 #define STDCALL __stdcall
 #else
-#define DLLEXPORT
+#define DLLEXPORT __attribute__((visibility("default")))
 #define STDCALL
 #endif
 
