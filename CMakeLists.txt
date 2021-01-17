@@ -787,6 +787,16 @@ core/fxge/ge/fx_ge_text.cpp
 core/fxge/ge/fx_text_int.h
 )
 
+if (ANDROID)
+    list(APPEND FXGE_SOURCES
+        core/fxge/android/cfpf_skiadevicemodule.cpp
+        core/fxge/android/cfpf_skiafont.cpp
+        core/fxge/android/cfpf_skiafontmgr.cpp
+        core/fxge/android/cfx_androidfontinfo.cpp
+        core/fxge/android/fx_android_imp.cpp
+    )
+endif(ANDROID)
+
 ######################## FXEDIT #############################################
 set(FXEDIT_SOURCES
 fpdfsdk/fxedit/fx_edit.h
